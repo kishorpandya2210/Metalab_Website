@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  font-family: "Quicksand", sans-serif;
+  height: 100%;
+}
+
+.facilitiesBody {
+  max-width: 1250px;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: auto;
+  background-color: #fff;
+  display: flex;
+}
+
+.facilitiesList {
+  background-color: white;
+  padding: 10px;
+  padding-top: 20px;
+  flex: 4;
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+.facilitiesInfo {
+  flex: 10;
+  padding: 20px;
+}
+.facilitiesSelector {
+  margin-top: 10px;
+}
+
+.facilityBtn {
+  background-color: white;
+  color: black;
+  padding: 10px 10px;
+  list-style-type: none;
+}
+
+.facilityBtnActive {
+  background-color: #eee;
+  color: red;
+  border-left: 2px solid;
+  padding: 10px 10px;
+  cursor: default;
+  font-weight: bolder;
+  list-style-type: none;
+}
+
+.facilityBtn :hover {
+  color: red;
+  background-color: #eee;
+  padding: 10px 10px;
+  cursor: default;
+  margin: -10px;
+}
+
+.testBtn {
+  list-style-type: none;
+  padding-left: 10px;
+  color: black;
+}
+
+.testBtn :hover {
+  color: red;
+  padding-left: 10px;
+}
+
+.testBtnActive {
+  color: red;
+  padding-left: 10px;
+}
+
+.navbar {
+  font-family: "Quicksand", sans-serif;
+  height: 150px;
+  background-color: red;
+  color: white;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

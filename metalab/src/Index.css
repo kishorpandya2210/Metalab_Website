@@ -12,7 +12,7 @@ main {
 }
 
 .facilitiesBody {
-  max-width: 1250px;
+  max-width: 1150px;
   height: 100vh;
   margin: 0 auto;
   overflow: auto;
@@ -64,8 +64,9 @@ main {
 
 .testBtn {
   list-style-type: none;
-  padding-left: 10px;
+  padding-left: 20px;
   color: black;
+  border-left: 2px red solid;
 }
 
 .testBtn :hover {
@@ -75,13 +76,14 @@ main {
 
 .testBtnActive {
   color: red;
-  padding-left: 10px;
+  padding-left: 20px;
+  border-left: 2px #c71206 solid;
 }
 
 .navbar {
   font-family: "Quicksand", sans-serif;
   height: 150px;
-  background-color: red;
+  background-color: #c71206;
   color: white;
   margin: 0 auto;
   display: flex;

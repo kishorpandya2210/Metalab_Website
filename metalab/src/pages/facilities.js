@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import departments from "../facilitiesInfo";
 import FacilitySelector from "../components/FacilitySelector";
 import NavBar from "../components/NavBar";
 
 const FacilitiesPage = () => {
-  const departmentList = ["Chemical", "Mechanical", "Metallurgical"];
-  const test = "none";
-
   const [currDept, setCurrDept] = useState("none");
   const [currTest, setCurrTest] = useState("none");
+
+  useEffect(() => {
+    console.log(currTest);
+  }, [currTest]);
 
   const handleDeptChange = (dept) => {
     setCurrDept(dept);
@@ -31,15 +32,21 @@ const FacilitiesPage = () => {
         </div>
         <div className="facilitiesInfo">
           <div>
-            <h2>{currDept} Department</h2>
-            <h2>{currTest}</h2>
-            <p>{departments.Chemical.info}</p>
-            <h3>Tests:</h3>
-            <ul>
-              {departments.Chemical.tests.map((test) => (
-                <li key={test.name}>{test.name}</li>
-              ))}
-            </ul>
+            {currDept !== "none" ? <h2>{currDept} Department</h2> : ""}
+            {currDept !== "none" ? <p>{departments[currDept].info} </p> : ""}
+            {currTest !== "none" ? <h3>{currTest}</h3> : ""}
+          </div>
+          <div>
+            {currDept !== "none" && currDept !== "none" ? <h3>Tests:</h3> : ""}
+            {/* <ul>
+              {currTest != "none" ? (
+                <li></li>
+              ) : (
+                departments[currDept].tests[currTest].tests.map((test) => (
+                  <li key={test.name}>{test.name}</li>
+                ))
+              )}
+            </ul> */}
           </div>
         </div>
       </main>
